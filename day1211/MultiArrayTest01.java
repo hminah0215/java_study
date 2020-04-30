@@ -1,0 +1,30 @@
+class  MultiArrayTest01
+{
+	public static void main(String[] args) 
+	{
+		int a[][] = new int[3][];
+		// 행마다 열의 사이즈를 알 수 없어요. 행의길이만 정해져있음.
+		// 자바에선 행마다 열의사이즈가 다를수도있다.
+
+		a[0] = new int[10];
+		a[1] = new int[2];
+		a[2] = new int[5];    //행마다 열의수가 다를수있어서 length라는 속성이 있음. 
+
+		//각배열의 요소에 1부터 1씩 증가한 값을 대입하여 출력
+		int n =1;
+		for( int i=0	;	i < a.length	;	i++ ){  //3행까지!
+			for( int j=0 ; j < a[i].length ; j++){ //i가 1이라면 2, i가 0이라면 10칸까지 
+				a[i][j] =n++;
+				System.out.print(a[i][j]+ " ");
+			}
+			System.out.println();
+		}
+		/* 이렇게 아래에 안쓰고 위에 바로 출력해도 결과 동일 
+			for(	int i=0 ; i< a.length; i++){
+			//for( int j=0 ; j < a[i].length ; j++){
+				//System.out.print(a[i][j]+ " ");
+			//}
+				//System.out.println();
+		}*/
+	}
+}

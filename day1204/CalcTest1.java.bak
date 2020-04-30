@@ -1,0 +1,27 @@
+import java.util.Scanner;
+class CalcTest1
+{
+	public static void main(String[] args) 
+	{
+	Scanner sc = new Scanner(System.in);
+	double a,b,add,sub,mul;
+	double div;
+	System.out.println("첫번째 수를 입력하세요.");
+	a = sc.nextInt();
+	System.out.println("두번째 수를 입력하세요.");
+	b = sc.nextInt();
+
+	
+		add = a+b;
+		sub = a-b;
+		mul = a*b;
+		div = a/b;
+
+			System.out.println((int)a + "+"+(int)b + "="+ (int)add);
+			System.out.println((int)a + "-"+(int)b + "="+ (int)sub);
+			System.out.println((int)a + "*"+(int)b + "="+ (int)mul);
+			System.out.println((int)a + "/"+(int)b + "="+ div);
+
+
+	}
+}

@@ -1,0 +1,45 @@
+//Runtime Exception의 후손이기때문에 throws로 던지고 메인에 트라이,캐치 예외처리 안해도 자바에서 예외처리 해줌.
+class ExceptionTest03
+{
+	public static void div(int a, int b) throws ArithmeticException {
+										
+		int r = a/b;
+		System.out.println("결과는 :" + r);
+	}
+	
+
+	public static void main(String[] args) 
+	{
+
+		div(4,0);
+
+	}
+}
+
+/*
+
+(((((컴파일시 오류)))))
+
+FileWriterTest.java:7: error: unreported exception IOException; must be caught o
+r declared to be thrown
+                FileWriter fw = new FileWriter("c:/javastudy/day1224/hello.txt")
+;
+                                ^
+FileWriterTest.java:8: error: unreported exception IOException; must be caught o
+r declared to be thrown
+                fw.write("메리크리스마스!!");
+                        ^
+FileWriterTest.java:9: error: unreported exception IOException; must be caught o
+r declared to be thrown
+                fw.close();
+                        ^
+3 errors
+
+
+==> File Writer의 생성자는 예외를 포함하고 있어요! 
+public FileWriter(STRING filename)은 런타임익셉션의 후손ㅇ 아니기 때문에 반드시 예외처리! 
+
+
+
+
+*/

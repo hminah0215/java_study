@@ -1,0 +1,30 @@
+//배열중에 큰수찾기
+import java.util.ArrayList;
+class	MaxofArray02
+{
+	public static void main(String[] args) 
+	{
+		int []a = { 10, 31, 100, 11, 100 };
+		
+		int max = a[0];
+		
+		for( int i=1 ; i < a.length ; i++ ){
+			if( a[i] > max){
+				max = a[i];
+				
+		}
+				
+			}
+				//int []position = new int[a.length];
+				ArrayList<Integer> position = new ArrayList<Integer>();
+				//동일한 값의 포지션이 몇개가 될지 몰라서 동적 배열을 한다. \
+				//note 가 떠서 Integer를 껴넣음. 무시해도 괜찮음. 
+				for(int i=0; i< a.length; i++){
+					if( max == a[i])
+						position.add(i);
+				}
+				
+			System.out.println("가장큰수 : " +  max);
+			System.out.println("가장큰값이 위치한 자리  : " + position ); 
+	}
+}

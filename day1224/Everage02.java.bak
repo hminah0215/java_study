@@ -1,0 +1,41 @@
+// 사용자한테 두수를 입력받아 두수의 조화평균을 구하여 출력하는 
+// 프로그램을 작성해봅니다.
+
+// 2ab/(a+b)
+
+import java.util.Scanner;
+
+
+class NotFoundHarmonicMeanException extends Exception
+{
+	public NotFoundHarmonicMeanException(String msg){
+		super(msg);
+	}
+}
+
+class  Everage02
+{
+	public static void main(String[] args) 
+	{
+		int a, b; 
+		double r =0;
+	
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("***조화 평균 프로그램***");
+		System.out.print("첫번째 수를 입력하세요 ==>");
+		a = sc.nextInt();
+		System.out.print("두번째 수를 입력하세요 ==>");
+		b = sc.nextInt();
+
+		if( a == -b){
+			throw new NotFoundHarmonicMeanException("두수의 조화평균은 없어요.");
+		}
+
+
+
+		r = 2 * a * b / (a+b);	
+
+		System.out.print("조화평균은 "+r);	
+	}
+}

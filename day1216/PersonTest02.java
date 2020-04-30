@@ -1,0 +1,27 @@
+class Person
+{
+	private String name;
+	private int age;
+	
+	public Person(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+	
+	public void info(){
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+		
+	}
+}
+
+
+
+class PersonTest02
+{
+	public static void main(String[] args) 
+	{
+		Person p = new Person(); 
+		p.info(); 
+	}
+}

@@ -1,0 +1,19 @@
+class Excercise06 
+{
+	public static void main(String[] args) 
+	{
+		int sum=0;
+		
+		for ( int i=10 ; i <=30  ; i++ ){
+		
+			for( int j=0 ; j <=5 ; j++){
+			
+			sum += i * j;  //sum= sum+(i*j) 와 같은결과.
+			
+			}
+			
+			
+		}
+		System.out.println(sum);
+	}
+}

@@ -1,0 +1,9 @@
+class  BooleanTest
+{
+	public static void main(String[] args) 
+	{
+		boolean isMille;
+		isMille= true;
+		System.out.println(isMille);
+	}
+}

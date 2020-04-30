@@ -1,0 +1,56 @@
+class Person{	
+	private String name;
+	private String gender;
+	private int age;
+	
+	public void setName(	String n ){
+		name= n;
+	}
+
+	public String getName( ){
+		return name;
+	}
+	
+	public String getGender(){
+		return gender;
+	}
+	
+	public void setGender(  String g ){
+		gender = g;
+	}
+
+	public void setAge( int a){
+		age = a;
+	}
+
+	public int getAge(){
+		return age;
+	}
+
+	public void eat( String food ){
+		System.out.println( gender + "," + age+"살" + name +" 이(가)" +food +"을(를)먹어요");
+	}
+	 public void sleep(){
+		System.out.println(name + "이(가) 쿨쿨~ 자요~");
+	 }
+}
+
+
+
+
+class PersonTest02 
+{
+	public static void main(String[] args) 
+	{
+		Person p = new Person();
+		//p.name = "최영수";
+		p.setName("최영수");
+		p.setGender("남자");
+		p.setAge(20);
+		p.eat(" 맥주 ");
+		p.sleep();
+		//System.out.println( p.getName() );
+		//System.out.println( p.getGender() );
+		//System.out.println ( p.getAge() );
+	}
+}

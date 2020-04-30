@@ -1,0 +1,50 @@
+/*  그해가 홀수년도이면 홀수년도에 태어난사람, 그해가 짝수년도이면 짝수년도에 태어난사람이
+무료암검진 대상자가 되도록 코드를 수정하세요.  */
+
+import java.util.Scanner;
+import java.util.Date;
+
+class Cancertest3
+{
+	public static void main(String[] args) 
+	{
+		
+		Scanner sc = new Scanner(System.in);
+		Date today= new Date();
+		int thisYear = today.getYear()+1900;
+
+		System.out.println("올해는 "+ thisYear);
+		int birthYear,age;
+		String result;
+		
+		System.out.println("**무료 암 검진 대상자 판별 프로그램**");
+		System.out.print("출생연도를 입력하세요 ===>");
+		birthYear = sc.nextInt();
+		age = thisYear - birthYear;
+
+		if ( thisYear %2 == 1 )
+		{
+			if ( age >=40 && birthYear %2 !=0 ) 
+			result = "무료 암검진 대상자입니다.";
+			
+	   else
+			result = "무료 암검진 대상자가 아닙니다.";
+		}
+		
+		else
+		{
+		
+		if ( age >=40 && birthYear %2 ==0 ) 
+			result = "무료 암검진 대상자입니다.";
+			
+	   else
+			result = "무료 암검진 대상자가 아닙니다.";
+		}
+
+	   System.out.println(result);
+		{
+		}
+
+
+	}
+}

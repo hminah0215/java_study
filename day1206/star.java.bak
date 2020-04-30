@@ -1,0 +1,102 @@
+/* 5일 숙제, 6일 수업시간에 스위치로 다시 
+3. 사용자 한테 생월, 생일을 입력받아 별자리를 구하여 출력하는 프로그램을 만들어 봅니다.
+	<< 실행 예 >>
+	이름은 무엇인가요? 홍길동
+	몇월에 태어났나요? 3
+	몇일에 태어났나요? 15
+	홍길동님의 별자리는 ___자리입니다.
+
+	<< 처리조건 >>
+	물병자리	01/20 ~ 02/18	물고기자리	02/19 ~ 03/20
+	양자리	    03/21 ~ 04/19	황소자리	04/20 ~ 05/20
+	쌍둥이자리	05/21 ~ 06/21	게자리	    06/22 ~ 07/22
+	사자자리	07/23 ~ 08/22	처녀자리	08/23 ~ 09/23
+	천칭자리	09/24 ~ 10/22	전갈자리	10/23 ~ 11/22
+	사수자리	11/23 ~ 12/24	염소자리	12/25 ~ 01/19
+*/
+
+import java.util.Scanner;
+class  Star
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int mon,day;
+		String x;
+
+		System.out.print("이름은 무엇인가요? ==>");
+		x=sc.next();
+		System.out.print("탄생월을 입력하세요. ==>");
+		mon=sc.nextInt();
+		
+		if(mon < 1 || mon > 12)
+		{
+			System.out.println("잘못된 월을 입력하셨습니다.");
+			return; 
+		}
+		
+		int lastday = 31;
+
+		switch(mon)
+		{
+			case 2:lastday=28;break;
+			case 4:case 6:case 9:case 11:lastday=30;break;
+			default:lastday=31;
+		}
+		
+		System.out.print("몇일에 태어났나요?");
+		day=sc.nextInt();
+		if(day < 1 || day > lastday)
+		{
+			System.out.println(mon + "월은 " + lastday+ " 일까지 있어요!");
+			return; 
+		}
+		
+		System.out.print("탄생일을 입력하세요. ==>");
+		day=sc.nextInt();
+		
+		
+
+
+		switch (mon)
+		{
+		
+		case 1:if(day >=20 && day<=30)System.out.print(x+ "님은 물병자리 입니다.");
+		       else if(day<=19)System.out.print(x+ "님은 염소자리 입니다.");break;
+		
+		case 2:if(day >=1 && day<=18)System.out.print(x+ "님은 물병자리 입니다.");
+		       else if(day>=19)System.out.print(x+ "님은 물고기자리 입니다.");break;
+			   
+		case 3:if(day >=21 && day<=31)System.out.print(x+ "님은 물고기자리 입니다.");
+		       else if(day>=20)System.out.print(x+ "님은 양자리 입니다.");break;	  
+		
+		case 4:if(day>=19)System.out.print(x+ "님은 양자리 입니다.");
+		       else if(day >=20 && day<=30)System.out.print(x+ "님은 황소자리 입니다.");break;
+ 
+	    case 5:if(day<=20)System.out.print(x+ "님은 황소자리 입니다.");
+		       else if(day >=21 && day<=31)System.out.print(x+ "님은 쌍둥이자리 입니다.");break;
+
+		case 6:if(day<=21)System.out.print(x+ "님은 쌍둥이자리 입니다.");
+		       else if(day >=22 && day<=30)System.out.print(x+ "님은 쌍둥이자리 입니다.");break;
+		
+		case 7:if(day<=22)System.out.print(x+ "님은 게자리 입니다.");
+		       else if(day >=23 && day<=31)System.out.print(x+ "님은 사자자리 입니다.");break;
+		
+		case 8:if(day<=22)System.out.print(x+ "님은 사자자리 입니다.");
+		       else if(day >=23 && day<=30)System.out.print(x+ "님은 처녀자리 입니다.");break;
+
+		case 9:if(day<=23)System.out.print(x+ "님은 처녀자리 입니다.");
+		       else if(day >=24 && day<=30)System.out.print(x+ "님은 천칭자리 입니다.");break;
+
+		case 10:if(day<=22)System.out.print(x+ "님은 천칭자리 입니다.");
+		       else if(day >=23 && day<=30)System.out.print(x+ "님은 전갈자리 입니다.");break;
+
+		case 11:if(day<=22)System.out.print(x+ "님은 전갈자리 입니다.");
+		       else if(day >=23 && day<=30)System.out.print(x+ "님은 사수자리 입니다.");break;
+
+		case 12:if(day<=24)System.out.print(x+ "님은 사수자리 입니다.");
+		       else if(day >=25 && day<=31)System.out.print(x+ "님은 염소자리 입니다.");break;
+		}
+		
+	}
+}

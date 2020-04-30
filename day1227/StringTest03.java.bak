@@ -1,0 +1,11 @@
+class  StringTest03
+{
+	public static void main(String[] args) 
+	{
+		String str ="hello";
+		str = str+ " korea";
+		System.out.println(str);
+		//결과물은 바뀐것 같지만, 더이상 쓰지않는 hello같은 것들이 쌓여서 비효율적.
+		//계속 다른 메모리를 생성한다. 그러니 걍 스트링은 불변이라고 생각하는게 나음.
+	}
+}

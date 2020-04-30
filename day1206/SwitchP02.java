@@ -1,0 +1,45 @@
+/*
+사용자한테 월을 입력받아 마지막날을 출력하는 프로그램을 switch를 사용하여 작성합니다.
+<실행예> 
+월을 입력하세요==> 4
+4월은 30일까지 있어요.
+*/
+
+import java.util.Scanner;
+class  SwitchP02 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int month,day;
+		
+		System.out.println("*** 마지막 날 확인 ***");
+		System.out.print("월을 입력하세요===>");
+		month=sc.nextInt();
+
+		if(month < 1 || month > 12)
+		{
+			System.out.println("입력값을 확인하세요!");
+			return; 
+		}
+
+		
+
+		switch(month)
+		{
+			case 2:day=28;break;
+			case 4:case 6:case 9:case 11:day=30;break;
+			default:day=31;
+			//내가 한 방법은 주석달아놓음.
+			//case 4:day="30일";break;
+			//case 6:day="30일";break;
+			//case 9:day="30일";break;
+			//case 11:day="30일";break;
+			//case 2:day="28일";break;
+			
+		}
+
+		System.out.println(month+ "월은 "+day +"일 까지 있어요!");
+
+	}
+}

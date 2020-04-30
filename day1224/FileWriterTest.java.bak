@@ -1,0 +1,41 @@
+import java.io.FileWriter;
+class FileWriterTest 
+{
+	public static void main(String[] args) 
+	{
+		try{
+		FileWriter fw = new FileWriter("c:/javastudy/day1224/hello.txt");
+		fw.write("메리크리스마스!!");
+		fw.close();
+		}catch(IOException i){
+			
+		}
+	}
+}
+/*
+
+(((((컴파일시 오류)))))
+
+FileWriterTest.java:7: error: unreported exception IOException; must be caught o
+r declared to be thrown
+                FileWriter fw = new FileWriter("c:/javastudy/day1224/hello.txt")
+;
+                                ^
+FileWriterTest.java:8: error: unreported exception IOException; must be caught o
+r declared to be thrown
+                fw.write("메리크리스마스!!");
+                        ^
+FileWriterTest.java:9: error: unreported exception IOException; must be caught o
+r declared to be thrown
+                fw.close();
+                        ^
+3 errors
+
+
+==> File Writer의 생성자는 예외를 포함하고 있어요! 
+public FileWriter(STRING filename)은 런타임익셉션의 후손ㅇ 아니기 때문에 반드시 예외처리! 
+
+
+
+
+*/

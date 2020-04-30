@@ -1,0 +1,33 @@
+배열 exercise 1번
+
+1-1 ) 30개의 원소를 가지는 int형 배열로 studentNumbers 변수로 참조된다.
+
+int []studentNumbers = new int [30];
+
+1-2) 100개의 원소를 가지는 double형 배열로 profits 변수로 참조된다.
+
+double []profits = new double [100];
+
+1-3) 2000개의 원소를 가지는 char형 배열로 proverbs 변수로 참조된다.
+
+char []proverbs = new char [2000];
+
+1-4) 1.2, 3.3, 6.7 과 같은 값을 가지는 double형 배열을 생성하고 초기화한다.
+
+double []a = {1.2, 3.3, 6.7};
+
+
+========================================================
+배열 exercise 2번 )배열선언에서 잘못된 점을 지적하시오.
+
+2-1) int []numbers = new int[100];
+2-2) double []rainfalls = new double[100];
+
+=========================================================
+배열 exercise 3번 )
+int []employees = new int[5];와 같은 배열선언이 있다고 하자.
+
+유효한 인덱스의 범위는 ?  4개 
+
+만약 employees[5]와 같이 원소를 접근하였다면 어떤일이 발생하는가?
+오류. 4개 만들어 놨으니까.

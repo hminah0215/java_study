@@ -1,0 +1,15 @@
+class BreakAndContinueTest02
+{
+	public static void main(String[] args) 
+	{
+		int i;
+		for(  i=1 ; i<=10 ; i++){
+			if(  i %3 == 0 ){
+					continue; //이 상황은 예외야 다음 반복문을 계속해! 반복문에서만 사용!
+		}			//특정상황을 제외시키고 스킵하고 반복을 해라라는 뜻. 
+					System.out.println(i); 
+		}
+		System.out.println("작업종료");
+		System.out.println(i); //for를 끝까지 다 돌기때문에 11로 출력됨. 
+	}
+}

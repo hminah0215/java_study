@@ -1,0 +1,38 @@
+							//인터페이스아 다형성 pdf 랩2번 
+interface Movable 
+//인터페이스는 바디가 있는 메소드가 오면 불법!!
+{
+	public  void speedUp( int amount );
+	public void speedDown( int amount );
+	
+	public void printSpeed(){
+		System.out.println("현재속도: " + speed);
+	}
+	/*
+	MovableTest03.java:7: error: interface abstract methods cannot have body
+        public void printSpeed(){
+	*/
+	
+	int speed = 100; 
+}
+class Car implements Movable
+{
+	public  void speedUp( int amount ){
+		
+	}
+	public void speedDown( int amount ){
+		
+	}
+}
+
+class MovableTest03
+
+{
+	public static void main(String[] args) 
+	{
+		Car c = new Car();
+		System.out.println("ok");
+		
+		
+	}
+}

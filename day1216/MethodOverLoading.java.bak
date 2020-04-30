@@ -1,0 +1,41 @@
+//메소드들로만 이루어진 클래스 실험.
+//정수 두개를 매개변수로 가지고 더하기 결과.
+
+class BitUtil
+{
+
+	public void add( int a, int b){
+		int r = a+b;
+		System.out.println("더하기 결과: "+ r);
+	}
+
+	public void add( double a, double b){ //자바는 같은이름의 메소드를 가질 수 있다. 
+		double r = a+b;
+		System.out.println("더하기 결과: "+ r);
+	}
+
+	public void add( int a, int b, int c){
+		int r = a+b+c;
+		System.out.println("더하기 결과: "+ r);
+	}
+	public void add( int i, double j){
+		double r = i + j;
+		System.out.println("더하기 결과: "+ r);
+	}
+	
+}
+
+
+
+class  MethodOverLoading
+{
+	public static void main(String[] args) 
+	{
+		 BitUtil bu = new  BitUtil();
+		 bu.add( 10,20 );
+		 bu.add( 5.7 , 5.2 );
+		 bu.add( 2,3,4 );
+		 bu.add( 5, 5.5);
+		 
+	}
+}

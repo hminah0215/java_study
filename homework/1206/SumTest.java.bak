@@ -1,0 +1,18 @@
+//숙제3번 선생님 문제풀이 
+/*3) 사용자로 부터 N을 입력받아 1에서 N까지의 짝수의합, 홀수의 합, 짝수의 개수, 
+	홀수의 개수를 각각 구하여 출력하세요. 
+*/
+import java.util.Scanner;
+class  SumTest
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n, sumEven=0, sumOdd=0, cntEven=0, cntOdd=0;
+     //입력받을값, 짝수의합, 홀수의합, 짝수의개수, 홀수의 개수
+
+		System.out.print("N을 입력하세요 ==>");
+		n=sc.nextInt();
+		//i : 1,2,3,4,5,....,n
+	}
+}

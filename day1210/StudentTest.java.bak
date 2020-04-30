@@ -1,0 +1,9 @@
+/*학생 10명의 점수를 입력받아 */
+import
+class  StudentTest
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

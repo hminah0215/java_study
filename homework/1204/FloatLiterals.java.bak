@@ -1,0 +1,12 @@
+public class FloatLiterals 
+{
+	public static void main(String[] args) 
+	{
+		double r1 = 123.5;
+		System.out.println(r1);
+
+		float r2 = (float)123.5;
+		System.out.println(r2);
+
+	} //end method main
+} //end class FloatLiterals

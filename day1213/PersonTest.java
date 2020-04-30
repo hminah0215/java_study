@@ -1,0 +1,42 @@
+/*
+사람 Person
+	속성 
+			이름		String name;       "이수인"
+			성별		String gender ;   "남자", "여자"
+			나이		int age;			20
+
+	동작
+	
+		      먹는다	void eat (String food)
+		      잠을잔다	void sleep()
+*/
+
+class Person{    //새로운 자료형 만들기
+
+	String name;
+	String gender;			//속성 : 멤버변수
+	int age;
+
+	void eat( String food ){			//동작 : 멤버메소드
+		System.out.println("성별이 " + gender + "이고 나이가 " + age + " 살 인 "+ name +
+										"이(가) " + food +" 를(을) 먹어요.");
+	}													
+	void sleep( ){
+		System.out.println(name + "이(가) 쿨쿨~ 자요~");
+	}
+}   //클래스를 정의했다. 
+
+
+
+class  PersonTest
+{
+	public static void main(String[] args) 
+	{
+		Person p = new Person( );  //클래스의 객체를 생성
+		p.name = "최영수";
+		p.age = 28;
+		p.gender = "남자";
+		p. eat("피자");
+		p.sleep();
+	}
+}

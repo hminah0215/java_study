@@ -1,0 +1,31 @@
+abstract class A
+{
+	abstract public void pro();
+}
+
+abstract class B
+{
+	abstract public void info();
+}
+
+class C extends A,B
+{
+	public void pro(){
+		System.out.println("pro입니다.");
+	}
+	public void info(){
+		System.out.println("info입니다.");
+	}
+}
+
+
+
+class InterFaceTest02
+{
+	public static void main(String[] args) 
+	{
+		C pob = new C();
+		ob.info();
+		ob.pro();
+	}
+}

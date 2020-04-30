@@ -1,0 +1,15 @@
+<< 문자열 처리 >>
+
+자바에서는 문자열 처리를 위하여 
+	String , StringBuffer , StringBuilder 클래스를 제공합니다.
+
+	String은 변하지 않는 문자열 처리에 적합합니다.
+	만약, 변하는 문자열 처리를 해야한다면
+		StringBuffer와 StringBuilder 를 권장합니다.
+
+
+StringBuffer를 String으로 변환하기 위해서는 
+	toString()메소드를 이용합니다.
+
+============================================================================
+<< StringTokenizer >>   java.util 에 있음. 

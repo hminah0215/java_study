@@ -1,0 +1,36 @@
+/*
+	연습) 사용자한테 임의의 수 N을 입력받아 N!을 구하여 출력하는 프로그램을 작성하고
+		실행해봅니다.
+	
+	<실행 예>
+	N을 입력하세요==> 5
+	5*4*3*2*1=___ /곱해서 누적하는게 ! .
+*/
+
+import java.util.Scanner;
+class  ForTest03
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n; //입력받는 값
+		int sum=1; //결과를 저장하는 변수
+
+		System.out.print("임의의 수 N을 입력하세요==>");
+		n = sc.nextInt();
+
+		for(int i = n ; i >= 1 ; i--  )
+		
+		{
+			sum = sum*i;
+			System.out.print(i);
+			if(i != 1)
+				System.out.print("*);
+		}
+			System.out.println("= " +sum+ " 입니다.");
+	}
+
+}
+
+	
+

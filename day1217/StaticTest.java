@@ -1,0 +1,32 @@
+class Family
+{
+	//접근명시자 생략하고 static설명
+	public String name;
+	public int age;
+	public static String addr; 
+	//클래스변수 : 객체마다공동으로 사용하는 기억공간or객체없이도 사용할 기억공간
+}
+
+
+class  StaticTest
+{
+	public static void main(String[] args) 
+	{
+		Family.addr = "서울시 서대문구 홍제동"; //클래스변수 접근.공동으로 사용하는 메모리
+		
+		Family f1 = new Family();
+		Family f2 = new Family();
+		f1.name = "이수인";
+		f1.age = 20;
+		f2.name = "이인준";
+		f2.age = 21;
+		System.out.println(f1.name+"\t" + f1.addr);
+		System.out.println(f2.name+"\t" + f2.addr);
+
+		f1.addr = "부산광역시 서면 신수동";
+		System.out.println(f1.name+"\t" + f1.addr);
+		System.out.println(f2.name+"\t" + f2.addr);
+		
+		System.out.println("우리가족의 주소: " + Family.addr);
+	}
+}

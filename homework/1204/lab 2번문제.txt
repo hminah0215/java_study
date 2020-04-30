@@ -1,0 +1,30 @@
+랩 2번문제
+
+2-1. 
+
+C:\javastudy\day1204\homework>javac FloatLiterals.java
+
+C:\javastudy\day1204\homework>java FloatLiterals
+123.5
+
+2-2. 
+오류남 
+C:\javastudy\day1204\homework>javac FloatLiterals.java
+FloatLiterals.java:8: error: incompatible types: possible lossy conversion from
+double to float
+                float r2 = 123.5;
+
+수정 
+
+float r2 = (float)123.5;
+		System.out.println(r2);
+
+2-3. 
+
+C:\javastudy\day1204\homework>javac FloatLiterals.java
+
+C:\javastudy\day1204\homework>java FloatLiterals
+123.5
+123.5
+123.5
+

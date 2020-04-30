@@ -1,0 +1,40 @@
+2019-12-06
+
+<<선택문>>
+
+if
+switch
+
+	switch( 변수나 수식 ) ==> ()에 올수있는 타입 String, Int
+	{
+		case 0 :
+		 문장1:
+
+		case 1 :
+		문장1:
+		 .
+		 .
+		 .
+	}
+
+   ****예시******
+//위처럼 아래로 나열하지않고 옆에 붙여서 써도 됨.케이스값의 순서도 순차적일필요는 없음
+   switch(n) 
+	{ 
+		case 0:case 1: case 2:System.out.println("이");break;
+		case 3:case 4:case 5:System.out.println("오");break;
+		case 6:case 7:case 8:case 9:System.out.println("구");break;
+		default:System.out.println("0~9사이의 값이 아닙니다.");//else랑같음. 그나머지들.
+	}
+
+제비뽑기(난수)해주는 메뉴얼 = java.util.Random
+첫번째 next.int()는 전체범위에서 
+두번째 next.int(int n)은 범위안에서 ex) next.int(100)이면 0~99사이에서.
+
+==========================================================================
+
+<<반복문>>
+for( ;  ;  ) //반복실행할 조건을 넣어야함
+{
+
+}

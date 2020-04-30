@@ -1,0 +1,23 @@
+//멤버 메소드 앞에 있는 파이널
+class Person
+{
+	final public void sayHello(){ //완전해서 오버라이딩 금지시키고 싶음!
+		System.out.println("안녕하세요.");
+	}
+}
+
+class Student extends Person
+{
+	//이렇게 재정의 못함
+	public void sayHello(){ 
+		System.out.println("시험잘봤니?");
+	}
+}
+class  FinalTest02
+{
+	public static void main(String[] args) 
+	{
+		Student s = new Student();
+		s.sayHello();
+	}
+}

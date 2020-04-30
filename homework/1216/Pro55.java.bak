@@ -1,0 +1,51 @@
+class BankAccount
+{
+	//private String name;     //이름
+	//private String acc;			//계좌번호
+	//private int money;			//잔액
+	//private double eja;		//이자율
+
+	public String bankAccount( String name, String acc){
+		String z =  name;
+		String x =  acc;
+		String q = z +" " +"\n"+"계좌번호: "+ x;
+		return q ;
+		
+	}
+
+	public int bankAccount( int money){
+		int c = money;
+		return c ;
+	}
+	public double bankAccount( double eja){
+		double v = eja;
+		return v;
+	}
+		public BankAccount(){
+		
+	}
+
+		public void info(){
+		System.out.println("이름: " + name+ "계좌번호: " +acc);
+		System.out.println("잔액: " + money);
+		System.out.println("이자율: " + eja);
+		
+	}
+}
+
+
+
+class Pro55 
+{
+	public static void main(String[] args) 
+	{
+		BankAccount ba = new BankAccount();
+		System.out.println( ba.bankAccount("현민아","123-456-78900"  ) );
+		System.out.println( ba.bankAccount( 500 ) );
+		System.out.println( ba.bankAccount( 3.2)+"%" );
+		ba.info();
+		BankAccount ba2 = new BankAccount();
+		ba2.info();
+		}
+	}
+

@@ -1,0 +1,21 @@
+//정규표현식 [] 사용
+import java.util.Scanner;
+class  CellTestRex
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		String phone;
+		System.out.print("전화번호를 입력하세요==>");
+		phone = sc.next();
+		
+							//폰번호가 0~9까지의 숫자로 형식대로 이루어져있는지 한번에 체크!
+		if( phone.matches("[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]") ){ 
+			System.out.println("올바른 전화번호입니다.");
+		}else{
+			System.out.println("올바른 전화번호가 아닙니다.");
+		}
+
+	
+	}	
+}

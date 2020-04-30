@@ -1,0 +1,95 @@
+/*		상속 pdf 프로그래밍 6번     */
+
+abstract class Shape
+//클래스가 추상메소드를 하나라도 가지고 있으면 그 클래스는 추상클래스가 되어야한다. 
+
+{
+	protected int x;
+	protected int y;
+	protected double area;
+
+	abstract public void calcArea();
+	//추상메소드. 반드시 상속받아서 재정의해라!라고 강제하는 것.
+	//{바디}를 없애고 앞에 abstract을 붙임
+
+	public Shape(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+	
+	public String toString(){
+		return "도형의 위치("+x+","+y+")  ,도형의 면적: " + area;
+	}
+}
+
+class Rect extends Shape
+{
+	private double width;
+	private double height;
+
+	public Rect( int x, int y, double width, double height ){
+		super(x,y);
+		this.width = width;
+		this.height = height;
+	}
+	public void calcArea(){
+		area = width * height;
+	}
+	public String toString(){
+		return "사각형: "+ super.toString() + ",가로:" + width +",세로:" + height; 
+	}
+}
+
+class Circle extends Shape
+{
+	private double radius; 
+	
+	public Circle(int x, int y, double radius){
+		super(x,y); //부모가 먼저 만들어줘야 하기때문에 늘 첫번째줄! 
+		this.radius = radius;
+	}
+	public void calcArea(){
+		area = radius * radius * 3.1415;
+	}
+	public String toString(){
+		return"원: "+ super.toString() + ",반지름:"+radius;
+	}
+}
+
+class Triangle extends Shape
+{
+	private double width;
+	private double heigth;
+
+	public Triangle(int x, int y,double width,double heigth ){
+		super(x,y);
+		this.width =	width;
+		this.heigth = heigth;
+	}
+	public void calcArea(){
+		area = (width * heigth) /2;
+	}
+	public String toString(){
+		return "삼각형: " + super.toString() + ",가로:"+width+ ",높이:" +heigth;
+	}
+}
+
+
+
+class  ShapeTest
+{
+	public static void main(String[] args) 
+	{
+		Rect r = new Rect( 10,10,100,200 );
+		r.calcArea();
+		System.out.println(r);
+
+		Circle c = new Circle( 10, 220, 50 );
+		c.calcArea();
+		System.out.println(c);
+
+		Triangle t = new Triangle( 10, 330,100, 200 );
+		t.calcArea();
+		System.out.println(t);
+	}
+}
